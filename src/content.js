@@ -51,6 +51,17 @@ export const abordagem = [
   },
 ]
 
+export const temas = [
+  'Ansiedade e estresse',
+  'Traumas e experiências difíceis',
+  'Luto e perdas',
+  'Autoconhecimento',
+  'Autoestima e autoconfiança',
+  'Relacionamentos',
+  'Sintomas no corpo (dores, tensões)',
+  'Fases de transição e recomeços',
+]
+
 export const passos = [
   {
     numero: '01',
@@ -91,3 +102,39 @@ export const faq = [
       'Os valores e formas de pagamento são combinados de forma individual. Me chame pelo WhatsApp para conversarmos.',
   },
 ]
+
+export const privacidade = {
+  atualizado: 'Julho de 2026',
+  blocos: [
+    {
+      titulo: '1. Quem somos',
+      texto:
+        'Este site é de Rosana Rosa P. Marinho, psicóloga (CRP 05/81019), e tem caráter meramente informativo sobre os serviços de atendimento psicológico oferecidos.',
+    },
+    {
+      titulo: '2. Quais dados coletamos',
+      texto:
+        'O site não possui formulários e não armazena dados pessoais em servidores próprios. O contato acontece diretamente pelo WhatsApp ou Instagram, por iniciativa do visitante. Ao clicar nesses botões, você é direcionado para plataformas de terceiros, que possuem suas próprias políticas de privacidade.',
+    },
+    {
+      titulo: '3. Uso das informações de contato',
+      texto:
+        'As informações que você compartilhar voluntariamente por WhatsApp são utilizadas exclusivamente para responder à sua mensagem, agendar sessões e prestar o atendimento psicológico. Elas não são vendidas nem compartilhadas com terceiros.',
+    },
+    {
+      titulo: '4. Sigilo profissional',
+      texto:
+        'Todo o conteúdo tratado em atendimento é protegido pelo sigilo profissional, conforme o Código de Ética Profissional do Psicólogo e a Lei nº 13.709/2018 (LGPD).',
+    },
+    {
+      titulo: '5. Seus direitos (LGPD)',
+      texto:
+        'Você pode solicitar, a qualquer momento, informações sobre seus dados, correção ou exclusão dos registros de contato. Basta enviar sua solicitação pelo WhatsApp informado neste site.',
+    },
+    {
+      titulo: '6. Cookies',
+      texto:
+        'Este site não utiliza cookies de rastreamento para publicidade. Caso ferramentas de análise de acesso sejam adicionadas futuramente, esta política será atualizada.',
+    },
+  ],
+}

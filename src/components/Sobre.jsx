@@ -4,7 +4,7 @@ export default function Sobre() {
   return (
     <section className="secao" id="sobre">
       <div className="container sobre__inner">
-        <div className="sobre__texto">
+        <div className="sobre__texto" data-reveal>
           <span className="rotulo">Sobre mim</span>
           <h2 className="titulo-secao">Um cuidado que escuta você por inteiro</h2>
           {sobre.paragrafos.map((p, i) => (
@@ -12,7 +12,7 @@ export default function Sobre() {
           ))}
         </div>
 
-        <aside className="sobre__formacao">
+        <aside className="sobre__formacao" data-reveal>
           <h3>Formação</h3>
           <ul>
             {sobre.formacao.map((f, i) => (

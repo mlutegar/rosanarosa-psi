@@ -7,12 +7,12 @@ export default function FAQ() {
   return (
     <section className="secao secao-alt" id="faq">
       <div className="container faq__inner">
-        <div className="abordagem__cabecalho">
+        <div className="abordagem__cabecalho" data-reveal>
           <span className="rotulo">Dúvidas frequentes</span>
           <h2 className="titulo-secao">Perguntas comuns</h2>
         </div>
 
-        <div className="faq__lista">
+        <div className="faq__lista" data-reveal>
           {faq.map((item, i) => {
             const ativo = aberto === i
             return (

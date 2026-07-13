@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className="hero" id="topo">
       <div className="container hero__inner">
-        <div className="hero__texto">
+        <div className="hero__texto" data-reveal>
           <span className="rotulo">{info.crp} · {info.cidade}</span>
           <h1 className="hero__titulo">{info.frase}</h1>
           <p className="hero__descricao">

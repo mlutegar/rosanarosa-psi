@@ -4,7 +4,7 @@ export default function ComoFunciona() {
   return (
     <section className="secao" id="como-funciona">
       <div className="container">
-        <div className="abordagem__cabecalho">
+        <div className="abordagem__cabecalho" data-reveal>
           <span className="rotulo">Primeiros passos</span>
           <h2 className="titulo-secao">Começar é simples</h2>
           <p className="subtitulo-secao">
@@ -12,7 +12,7 @@ export default function ComoFunciona() {
           </p>
         </div>
 
-        <div className="passos__grid">
+        <div className="passos__grid" data-reveal>
           {passos.map((p, i) => (
             <div key={i} className="passo">
               <span className="passo__numero">{p.numero}</span>

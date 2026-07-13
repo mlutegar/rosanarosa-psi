@@ -5,6 +5,7 @@ import { linkWhatsapp } from '../utils.js'
 const links = [
   { href: '#sobre', label: 'Sobre' },
   { href: '#abordagem', label: 'Abordagem' },
+  { href: '#para-quem', label: 'Para quem é' },
   { href: '#como-funciona', label: 'Como funciona' },
   { href: '#faq', label: 'Dúvidas' },
   { href: '#contato', label: 'Contato' },

@@ -349,14 +349,14 @@
   bottom: 24px;
   right: 24px;
   z-index: 60;
-  width: 58px;
   height: 58px;
-  border-radius: 50%;
+  padding: 0 16px;
+  border-radius: 999px;
   background: var(--cor-whatsapp);
   color: #fff;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 6px;
   box-shadow: 0 10px 26px rgba(37, 211, 102, 0.45);
   transition: transform 0.2s ease;
   animation: pulso 2.4s infinite;
@@ -370,9 +370,164 @@
   100% { box-shadow: 0 10px 26px rgba(37, 211, 102, 0.45), 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
+/* ===== Para quem / Temas ===== */
+.temas__grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.tema {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--cor-creme);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-sm);
+  padding: 16px 18px;
+  font-size: 0.96rem;
+  color: var(--cor-texto);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.tema:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-suave);
+}
+.tema__marca {
+  color: var(--cor-salvia);
+  flex-shrink: 0;
+}
+.temas__cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ===== Footer link ===== */
+.footer__link {
+  background: none;
+  border: none;
+  color: #eaded0;
+  font-family: var(--fonte-corpo);
+  font-size: 0.86rem;
+  cursor: pointer;
+  text-decoration: underline;
+  opacity: 0.85;
+  padding: 4px;
+}
+.footer__link:hover {
+  opacity: 1;
+}
+
+/* ===== Modal Privacidade ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.modal__fundo {
+  position: absolute;
+  inset: 0;
+  background: rgba(60, 55, 47, 0.55);
+  backdrop-filter: blur(3px);
+  animation: fade 0.25s ease;
+}
+.modal__caixa {
+  position: relative;
+  background: var(--cor-fundo);
+  border-radius: var(--raio);
+  max-width: 680px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 40px;
+  box-shadow: var(--sombra);
+  animation: sobe 0.3s ease;
+}
+.modal__fechar {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: var(--cor-fundo-alt);
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--cor-terra-escuro);
+}
+.modal__fechar:hover {
+  background: var(--cor-borda);
+}
+.modal__meta {
+  color: var(--cor-texto-suave);
+  font-size: 0.88rem;
+  margin-bottom: 24px;
+}
+.modal__bloco {
+  margin-bottom: 22px;
+}
+.modal__bloco h3 {
+  font-size: 1.08rem;
+  margin-bottom: 6px;
+}
+.modal__bloco p {
+  color: var(--cor-texto-suave);
+  font-size: 0.98rem;
+}
+
+/* ===== WhatsApp flutuante com texto ===== */
+.whatsapp-float__texto {
+  font-family: var(--fonte-corpo);
+  font-weight: 600;
+  font-size: 0.95rem;
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: max-width 0.3s ease, margin 0.3s ease;
+}
+.whatsapp-float:hover .whatsapp-float__texto {
+  max-width: 140px;
+  margin-right: 4px;
+}
+
+/* ===== Animacoes de revelacao ===== */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+[data-reveal].revelado {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes sobe {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: none; }
+}
+
 /* ===== Responsivo ===== */
 @media (max-width: 900px) {
-  .abordagem__grid {
+  .abordagem__grid,
+  .temas__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }

@@ -4,7 +4,7 @@ import { linkWhatsapp } from '../utils.js'
 export default function Contato() {
   return (
     <section className="secao contato" id="contato">
-      <div className="container contato__card">
+      <div className="container contato__card" data-reveal>
         <span className="rotulo">Vamos conversar</span>
         <h2 className="titulo-secao">Pronta para te acolher</h2>
         <p className="subtitulo-secao contato__texto">
